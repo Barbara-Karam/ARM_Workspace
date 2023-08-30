@@ -16,7 +16,7 @@
 
 void main()
 {
-	u16 counter = 500;
+	u16 counter = 600;
 	RCC_voidEnableSysClocks();
 	RCC_voidInitSysCLock();
 	//enable RCC for GPIOA
