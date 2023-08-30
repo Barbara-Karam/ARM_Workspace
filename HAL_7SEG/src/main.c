@@ -30,7 +30,7 @@ void main() {
 	{
 		SEVEN_SEG_voidDisplay(GPIOA,0,ZERO,COMMON_ANO);
 		delay(100);
-		SEVEN_SEG_voidDisplay(GPIOA,0,ONE,COMMON_ANO);
+		SEVEN_SEG_voidDisplay(GPIOA,0,TWO,COMMON_ANO);
 		delay(100);
 
 	};
