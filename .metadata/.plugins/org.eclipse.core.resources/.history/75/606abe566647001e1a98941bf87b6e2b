@@ -129,24 +129,24 @@ void MGPIO_voidSetPinValue(u8 copy_u8PORT, u8 copy_u8PIN, u8 copy_u8Value) {
 	switch (copy_u8PORT) {
 	case GPIOA:
 		if (copy_u8Value == GPIO_HIGH) {
-			GPIOA_BSR = (1 << copy_u8PIN);
+			GPIOA_BSR = (<<copy_u8PIN);
 		} else if (copy_u8Value == GPIO_LOW) {
-			GPIOA_BRR = (1 << copy_u8PIN);
+			CLR_BIT(GPIOA_ODR, copy_u8PIN);
 		}
 		break;
 	case GPIOB: {
 		if (copy_u8Value == GPIO_HIGH) {
-			GPIOB_BSR = (1 << copy_u8PIN);
+			SET_BIT(GPIOB_ODR, copy_u8PIN);
 		} else if (copy_u8Value == GPIO_LOW) {
-			GPIOB_BRR = (1 << copy_u8PIN);
+			CLR_BIT(GPIOB_ODR, copy_u8PIN);
 		}
 		break;
 	}
 	case GPIOC: {
 		if (copy_u8Value == GPIO_HIGH) {
-			GPIOC_BSR = (1 << copy_u8PIN);
+			SET_BIT(GPIOC_ODR, copy_u8PIN);
 		} else if (copy_u8Value == GPIO_LOW) {
-			GPIOC_BRR = (1 << copy_u8PIN);
+			CLR_BIT(GPIOC_ODR, copy_u8PIN);
 		}
 		break;
 	}

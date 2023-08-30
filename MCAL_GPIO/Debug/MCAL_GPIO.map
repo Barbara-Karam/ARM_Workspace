@@ -1181,7 +1181,7 @@ Discarded input sections
  .text.MGPIO_voidSetPinDirection
                 0x00000000      0x100 ./src/GPIO_prgram.o
  .text.MGPIO_voidSetPinValue
-                0x00000000       0x8c ./src/GPIO_prgram.o
+                0x00000000       0x80 ./src/GPIO_prgram.o
  .text.MGPIO_voidSetPortValue
                 0x00000000       0x74 ./src/GPIO_prgram.o
  .text.MGPIO_voidGetPinValue
@@ -1694,7 +1694,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2e37
+.debug_info     0x00000000     0x2e33
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x94a ./system/src/newlib/_exit.o
  .debug_info    0x0000094a      0x42e ./system/src/newlib/_startup.o
@@ -1703,9 +1703,9 @@ END GROUP
  .debug_info    0x00001a46      0xae8 ./system/src/cortexm/exception_handlers.o
  .debug_info    0x0000252e      0x494 ./system/src/cmsis/system_stm32f10x.o
  .debug_info    0x000029c2       0xca ./system/src/cmsis/vectors_stm32f10x.o
- .debug_info    0x00002a8c      0x18a ./src/GPIO_prgram.o
- .debug_info    0x00002c16       0xde ./src/RCC_program.o
- .debug_info    0x00002cf4      0x143 ./src/main.o
+ .debug_info    0x00002a8c      0x186 ./src/GPIO_prgram.o
+ .debug_info    0x00002c12       0xde ./src/RCC_program.o
+ .debug_info    0x00002cf0      0x143 ./src/main.o
 
 .debug_abbrev   0x00000000      0xcfb
  *(.debug_abbrev)
@@ -1746,7 +1746,7 @@ END GROUP
  .debug_frame   0x00000334       0x50 ./src/RCC_program.o
  .debug_frame   0x00000384       0x38 ./src/main.o
 
-.debug_str      0x00000000    0x55e2a
+.debug_str      0x00000000    0x55e41
  *(.debug_str)
  .debug_str     0x00000000     0x7cf4 ./system/src/newlib/_exit.o
                                0x7eb8 (size before relaxing)
@@ -1762,21 +1762,21 @@ END GROUP
                               0x4e8a1 (size before relaxing)
  .debug_str     0x00054ed5       0x57 ./system/src/cmsis/vectors_stm32f10x.o
                                0x3846 (size before relaxing)
- .debug_str     0x00054f2c      0x8a0 ./src/GPIO_prgram.o
-                               0x3592 (size before relaxing)
- .debug_str     0x000557cc      0x60a ./src/RCC_program.o
+ .debug_str     0x00054f2c      0x8b7 ./src/GPIO_prgram.o
+                               0x35a9 (size before relaxing)
+ .debug_str     0x000557e3      0x60a ./src/RCC_program.o
                                0x33dc (size before relaxing)
- .debug_str     0x00055dd6       0x54 ./src/main.o
+ .debug_str     0x00055ded       0x54 ./src/main.o
                                0x30f8 (size before relaxing)
 
-.debug_loc      0x00000000      0x8fe
+.debug_loc      0x00000000      0x802
  *(.debug_loc)
  .debug_loc     0x00000000      0x1a9 ./system/src/newlib/_startup.o
  .debug_loc     0x000001a9       0x63 ./system/src/newlib/_syscalls.o
  .debug_loc     0x0000020c       0xdf ./system/src/cmsis/system_stm32f10x.o
- .debug_loc     0x000002eb      0x495 ./src/GPIO_prgram.o
- .debug_loc     0x00000780      0x14c ./src/RCC_program.o
- .debug_loc     0x000008cc       0x32 ./src/main.o
+ .debug_loc     0x000002eb      0x399 ./src/GPIO_prgram.o
+ .debug_loc     0x00000684      0x14c ./src/RCC_program.o
+ .debug_loc     0x000007d0       0x32 ./src/main.o
 
 .debug_macinfo
  *(.debug_macinfo)

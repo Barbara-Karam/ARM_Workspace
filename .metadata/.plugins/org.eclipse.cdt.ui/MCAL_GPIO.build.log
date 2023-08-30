@@ -20,3 +20,6 @@ arm-none-eabi-size --format=berkeley "MCAL_GPIO.elf"
    1556	     76	    268	   1900	    76c	MCAL_GPIO.elf
 Finished building: MCAL_GPIO.siz
  
+
+20:58:58 Build Finished (took 1s.184ms)
+

@@ -5,6 +5,7 @@
 /************************************************************************/
 
 //libraries
+#include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
 //layers
@@ -128,9 +129,9 @@ void MGPIO_voidSetPinValue(u8 copy_u8PORT, u8 copy_u8PIN, u8 copy_u8Value) {
 	switch (copy_u8PORT) {
 	case GPIOA:
 		if (copy_u8Value == GPIO_HIGH) {
-			SET_BIT(GPIOA_ODR, copy_u8PIN);
+			GPIOA_BSR = (1 << copy_u8PIN);
 		} else if (copy_u8Value == GPIO_LOW) {
-			CLR_BIT(GPIOA_ODR, copy_u8PIN);
+			GPIOA_BRR = (1 << copy_u8PIN);
 		}
 		break;
 	case GPIOB: {
