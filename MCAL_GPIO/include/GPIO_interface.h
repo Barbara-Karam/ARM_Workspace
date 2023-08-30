@@ -70,6 +70,6 @@ void MGPIO_voidSetPinValue(u8 copy_u8PORT,u8 copy_u8PIN,u8 copy_u8Value);
 
 u8 MGPIO_voidGetPinValue(u8 copy_u8PORT,u8 copy_u8PIN); 
 
-
+void MGPIO_voidLockPinDirection(u8 copy_u8PORT, u8 copy_u8PIN);
 
 #endif

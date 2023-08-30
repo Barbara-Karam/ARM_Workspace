@@ -206,3 +206,20 @@ u8 MGPIO_voidGetPinValue(u8 copy_u8PORT, u8 copy_u8PIN) {
 	}
 	return LOC_u8Reslt;
 }
+
+void MGPIO_voidLockPinDirection(u8 copy_u8PORT, u8 copy_u8PIN) {
+	switch (copy_u8PORT) {
+	case GPIOA:
+		SET_BIT(GPIOA_LCK,copy_u8PIN);
+		break;
+	case GPIOB:
+		SET_BIT(GPIOA_LCK,copy_u8PIN);
+		break;
+	case GPIOC:
+		SET_BIT(GPIOA_LCK,copy_u8PIN);
+		break;
+	default:
+		break;
+
+	}
+}
