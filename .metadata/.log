@@ -86,3 +86,6 @@ java.lang.IllegalStateException
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-08-30 20:18:28.552
 !MESSAGE Indexed 'HAL_SWITCH' (21 sources, 182 headers) in 1.03 sec: 11,496 declarations; 18,869 references; 0 unresolved inclusions; 90 syntax errors; 122 unresolved names (0.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-30 20:23:04.518
+!MESSAGE Indexed 'trying' (20 sources, 180 headers) in 1.14 sec: 11,479 declarations; 18,819 references; 0 unresolved inclusions; 90 syntax errors; 122 unresolved names (0.4%)

@@ -83,3 +83,6 @@ In file included from ../src/GPIO_prgram.c:13:0:
  u8 MGPIO_voidGetPinValue(u8 copy_u8PORT, u8 copy_u8PIN) {
                                           ^~
 make: *** [src/subdir.mk:29: src/GPIO_prgram.o] Error 1
+
+20:23:25 Build Finished (took 579ms)
+
