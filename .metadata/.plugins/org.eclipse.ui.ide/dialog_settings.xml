@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\brbar\Desktop\ARM\Git_ARM_Workspace\MCAL_RCC"/>
+		<item value="C:\Users\brbar\Desktop\ARM\Git_ARM_Workspace\MCAL_GPIO"/>
+		<item value="C:\Users\brbar\Desktop\ARM\Git_ARM_Workspace"/>
 		<item value="C:\Users\brbar\Desktop\ARM\ARMworkspace\Git_ARM_Workspace"/>
 		<item value="C:\Users\brbar\Desktop\ARM\ARMworkspace\Git_ARM_Workspace\HAL_LED"/>
 		<item value="C:\Users\brbar\Desktop\ARM\ARMworkspace\Git_ARM_Workspace\HAL_7SEG"/>

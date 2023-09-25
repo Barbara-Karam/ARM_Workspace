@@ -1,0 +1,63 @@
+/*
+ * NVIC_program.c
+ *
+ *  Created on: Sep 25, 2023
+ *      Author: brbar
+ */
+#include "STD_TYPES.h"
+#include"BIT_MATH.h"
+#include"Delay.h"
+
+#include "NVIC_interface.h"
+#include "NVIC_config.h"
+#include "NVIC_private.h"
+
+
+void MNVIC_voidEnableInterrupt (u8 Copy_u8IntNumber)
+{
+	if ( Copy_u8IntNumber <=31)
+	{
+		NVIC_ISER0 = (1 << Copy_u8IntNumber);
+	}
+	else if ( Copy_u8IntNumber <= 59)
+	{
+		Copy_u8IntNumber=Copy_u8IntNumber-32;
+		NVIC_ISER1 = (1 << Copy_u8IntNumber);
+	}
+	else
+	{
+		/*Return Error*/
+	}
+}
+void MNVIC_voidDisableInterrupt (u8 Copy_u8IntNumber)
+{
+	if ( Copy_u8IntNumber <=31)
+	{
+		NVIC_ICER0 = (1 << Copy_u8IntNumber);
+	}
+	else if ( Copy_u8IntNumber <= 59)
+	{
+		Copy_u8IntNumber=Copy_u8IntNumber-32;
+		NVIC_ICER1 = (1 << Copy_u8IntNumber);
+	}
+	else
+	{
+		/*Return Error*/
+	}
+}
+void MNVIC_voidSetPendingFlag (u8 Copy_u8IntNumber)
+{
+	if ( Copy_u8IntNumber <=31)
+	{
+		NVIC_ISPR0 = (1 << Copy_u8IntNumber);
+	}
+	else if ( Copy_u8IntNumber <= 59)
+	{
+		Copy_u8IntNumber=Copy_u8IntNumber-32;
+		NVIC_ISPR1 = (1 << Copy_u8IntNumber);
+	}
+	else
+	{
+		/*Return Error*/
+	}
+}
