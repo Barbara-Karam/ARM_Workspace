@@ -307,15 +307,8 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="Hello_DIO.ilg.gnuarmeclipse.managedbuild.cross.target.elf.380387826" name="Executable" projectType="ilg.gnuarmeclipse.managedbuild.cross.target.elf"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1804742378;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1804742378.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1816285510;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1218051341">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1745117514;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1745117514.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1177682228;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1534717538">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration"/>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
 </cproject>
