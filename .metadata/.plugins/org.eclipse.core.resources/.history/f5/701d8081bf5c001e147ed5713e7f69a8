@@ -95,16 +95,4 @@ u8 MNVIC_u8GetActiveFlag (u8 Copy_u8IntNumber)
 
 	return Local_u8Result;
 }
-void MNVIC_voidSetPriority (s8 Copy_s8InterruptID,u8 Copy_u8GroupPriority,u8 Copy_u8SubPriority,u32 Copy_u32GROUP)
-{
-	u8 Local_u8Priority =Copy_u8SubPriority | (Copy_u8GroupPriority<<((Copy_u32GROUP-0x05FA0300)/256));
-	//core peripheral
-
-
-	//external peripheral
-	if(Copy_s8InterruptID >= 0)
-	{
-		NVIC_IPR[Copy_s8InterruptID]
-	}
-}
 
