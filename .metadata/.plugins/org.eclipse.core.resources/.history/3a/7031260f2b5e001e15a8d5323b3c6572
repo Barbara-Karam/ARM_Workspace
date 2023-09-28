@@ -1,0 +1,16 @@
+/*
+ * EXTI_private.h
+ *
+ *  Created on: Sep 28, 2023
+ *      Author: brbar
+ */
+
+#ifndef EXTI_PRIVATE_H_
+#define EXTI_PRIVATE_H_
+
+typedef struct{
+
+}EXIT_t;
+
+
+#endif /* EXTI_PRIVATE_H_ */
