@@ -36,9 +36,7 @@ typedef struct{
 #define LINE14 14
 #define LINE15 15
 
-#define FALLING  0
-#define RISING   1
-#define ON_CHANGE   2
+
 
 
 #endif /* EXTI_PRIVATE_H_ */

@@ -9,7 +9,7 @@
 #define EXTI_CONFIG_H_
 
 #define EXTI_LINE  LINE0 //0:15
-#define EXTI_MODE  RISING//RISING or FALLING or ON_CHANGE
+#define EXTI_MODE  RISING
 
 
 #endif /* EXTI_CONFIG_H_ */
