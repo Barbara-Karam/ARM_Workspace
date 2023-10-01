@@ -1,0 +1,48 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: brbar
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+//layers
+#include "RCC_interface.h"
+
+//own driver
+#include "GPIO_interface.h"
+
+
+void main()
+{
+	u16 counter = 600;
+	RCC_voidEnableSysClocks();
+	RCC_voidInitSysCLock();
+	//enable RCC for GPIOA
+	RCC_voidEnableClock(RCC_APB2,GPIOA_Clock);
+	//enable RCC for GPIOB
+	RCC_voidEnableClock(RCC_APB2,GPIOB_Clock);
+	//enable RCC for GPIOC
+	RCC_voidEnableClock(RCC_APB2,GPIOC_Clock);
+	//PINA0 output push/pull 10Mhz
+	MGPIO_voidSetPinDirection(GPIOA,PIN0,OUTPUT_SPEED_10M_PP);
+	while(1)
+	{
+		//turn on LED
+		MGPIO_voidSetPinValue(GPIOA,PIN0,GPIO_HIGH);
+		//delay
+		for(u16 i=0;i<counter;i++)
+		{
+			for(u16 j=0;j<counter;j++)
+			{
+				asm("NOP");
+			}
+
+		}
+		//turn off LED
+		MGPIO_voidSetPinValue(GPIOA,PIN0,GPIO_LOW);
+
+	};
+}
+
