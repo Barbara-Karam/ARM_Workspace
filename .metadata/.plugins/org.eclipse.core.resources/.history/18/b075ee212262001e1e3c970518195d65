@@ -34,8 +34,8 @@ void main()
 	MNVIC_voidEnableInterrupt(7);
 
 	//setting priority
-	MNVIC_voidSetPriority(6,1,0,GROUP5);
-	MNVIC_voidSetPriority(7,0,3,GROUP5);
+	MNVIC_voidSetPriority(6,1,0);
+	MNVIC_voidSetPriority(7,0,3);
 
 	MNVIC_voidClearPendingFlag(6);
 	while (1)

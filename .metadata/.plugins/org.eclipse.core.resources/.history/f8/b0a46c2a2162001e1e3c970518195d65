@@ -26,18 +26,6 @@ void main()
 	MGPIO_voidSetPinDirection(GPIOA,PIN1,OUTPUT_SPEED_2M_PP);
 	MGPIO_voidSetPinDirection(GPIOA,PIN2,OUTPUT_SPEED_2M_PP);
 
-	//initialize NVIC
-	MNVIC_voidInit();
-
-	//enable EXTI0 & EXTI1
-	MNVIC_voidEnableInterrupt(6);
-	MNVIC_voidEnableInterrupt(7);
-
-	//setting priority
-	MNVIC_voidSetPriority(6,1,0,GROUP5);
-	MNVIC_voidSetPriority(7,0,3,GROUP5);
-
-	MNVIC_voidClearPendingFlag(6);
 	while (1)
 	{
 

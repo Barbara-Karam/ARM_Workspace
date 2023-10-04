@@ -11,13 +11,6 @@
 #include "NVIC_config.h"
 #include "NVIC_private.h"
 
-void MNVIC_voidInit(void)
-{
-	#define SCB_AIRCR *((u32*)0xE000ED)
-	SCB_AIRCR = MNVIC_GROUP_SUB_DISTRIBUTION;
-}
-
-
 
 void MNVIC_voidEnableInterrupt (u8 Copy_u8IntNumber)
 {

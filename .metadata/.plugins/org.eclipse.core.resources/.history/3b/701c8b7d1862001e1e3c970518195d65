@@ -13,7 +13,7 @@
 
 void MNVIC_voidInit(void)
 {
-	#define SCB_AIRCR *((u32*)0xE000ED)
+	#define SCB_AIRCR *((u32*)0xE000ED0C)
 	SCB_AIRCR = MNVIC_GROUP_SUB_DISTRIBUTION;
 }
 

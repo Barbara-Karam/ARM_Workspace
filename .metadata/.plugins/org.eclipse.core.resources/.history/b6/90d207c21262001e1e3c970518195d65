@@ -46,10 +46,6 @@
 #define SCB_BFAR			*((volatile u32*)SCB_BASE_ADDRESS+0x38)
 
 
-#define			MNVIC_GROUP_4_SUB_0		0x05FA0300 //4 bits for group, 0 bits for sub-group
-#define			MNVIC_GROUP_3_SUB_1		0x05FA0400 //3 bits for group, 1 bits for sub-group
-#define			MNVIC_GROUP_2_SUB_2		0x05FA0500 //2 bits for group, 2 bits for sub-group
-#define			MNVIC_GROUP_1_SUB_3		0x05FA0600 //1 bits for group, 3 bits for sub-group
-#define			MNVIC_GROUP_0_SUB_4		0x05FA0700 //0 bits for group, 4 bits for sub-group
+
 
 #endif /* NVIC_PRIVATE_H_ */
