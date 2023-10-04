@@ -1,0 +1,63 @@
+/************************************************************************/
+/*Author  :Barbara Karam                                                */
+/*Date    :12 Aug 2023                                                  */
+/*Version :V01                                                          */
+/************************************************************************/
+#ifndef RCC_CONFIG_H
+#define RCC_CONFIG_H
+
+/*
+	Options : 1- RCC_CLOCK_ENABLE
+              2- RCC_CLOCK_DISABLE
+	Note: Only Enable PLL if there's another clock enabled
+	Note: Only choose HSE Source when HSE is enabled, you can only choose one mode for HSE
+*/
+
+#define		RCC_HSI_MODE				RCC_CLOCK_ENABLE
+#define 	RCC_HSE_MODE				RCC_CLOCK_DISABLE
+#if RCC_HSE_MODE == RCC_CLOCK_ENABLE
+    #define RCC_HSE_RC_MODE RCC_CLOCK_DISABLE
+    #if RCC_HSE_RC_MODE == RCC_CLOCK_DISABLE
+        #define RCC_HSE_CRYSTAL_MODE RCC_CLOCK_ENABLE
+    #endif
+#endif
+
+#if RCC_HSI_MODE == RCC_CLOCK_ENABLE || RCC_HSE_MODE == RCC_CLOCK_ENABLE
+    #define RCC_PLL_MODE RCC_CLOCK_DISABLE
+#else
+    #error("At least one clock should be enabled")
+#endif
+
+/*
+	Options : 1- RCC_HSE
+			  2- RCC_HSI
+			  3- RCC_PLL
+*/
+
+#define		RCC_CLOCK_TYPE				RCC_HSI
+
+/*
+	Options : 1- RCC_PLL_IN_HSI_DIV_2
+              2- RCC_PLL_IN_HSE_DIV_2
+			  3- RCC_PLL_IN_HSE
+	Note: Select value only if you have PLL enabled
+*/
+
+#if 		RCC_PLL_MODE 		==		RCC_CLOCK_ENABLE
+#define		RCC_PLL_INPUT			 	RCC_PLL_IN_HSI_DIV_2
+#else
+#define      RCC_PLL_INPUT               00
+#endif
+
+/*
+	Options : 2 to 16
+	Note: Select value only if you enable PLL
+
+*/
+#if 		RCC_PLL_MODE 		==		RCC_CLOCK_ENABLE
+#define		RCC_PLL_MUL_VALUE			PLL_MUL_2
+#else
+#define RCC_PLL_MUL_VALUE			0000
+#endif
+
+#endif

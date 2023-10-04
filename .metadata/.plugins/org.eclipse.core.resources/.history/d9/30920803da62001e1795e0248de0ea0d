@@ -1,0 +1,32 @@
+/*
+ * STK_program.c
+ *
+ *  Created on: Oct 4, 2023
+ *      Author: brbar
+ */
+#include"STD_TYPES.h"
+#include"BIT_MATH.h"
+
+#include"STK_interface.h"
+#include"STK_config.h"
+#include"STK_private.h"
+
+void MSTK_Load(u32 copy_u32DelayedClockCycle,u8 copy_u8Mode)
+{
+	if(copy_u32DelayedClockCycle <= 0x00FFFFFF)
+	{
+		if(copy_u8Mode == INT_MODE_RECURRENT)
+		{
+			copy_u32DelayedClockCycle--;
+		}
+		STK->LOAD = copy_u32DelayedClockCycle;
+	}
+	else
+	{
+		//error
+	}
+}
+u32 MSTK_ReadTime(void)
+{
+
+}

@@ -1,0 +1,14 @@
+/*
+ * STK_interface.h
+ *
+ *  Created on: Oct 4, 2023
+ *      Author: brbar
+ */
+
+#ifndef STK_INTERFACE_H_
+#define STK_INTERFACE_H_
+
+void MSTK_Load(u32 copy_DelayedTimed);
+
+
+#endif /* STK_INTERFACE_H_ */

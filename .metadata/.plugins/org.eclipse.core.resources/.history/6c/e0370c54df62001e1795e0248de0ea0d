@@ -1,0 +1,21 @@
+/*
+ * STK_interface.h
+ *
+ *  Created on: Oct 4, 2023
+ *      Author: brbar
+ */
+
+#ifndef STK_INTERFACE_H_
+#define STK_INTERFACE_H_
+
+void MSTK_Load(u32 copy_u32DelayedClockCycle,u8 copy_u8Mode);
+
+
+#define INT_MODE_SINGLE 0
+#define INT_MODE_RECURRENT 1
+
+#define AHB_DIV_8 0
+#define AHB_NO_DIV 0
+
+
+#endif /* STK_INTERFACE_H_ */

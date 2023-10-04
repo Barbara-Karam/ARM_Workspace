@@ -1,0 +1,18 @@
+void MSTK_voidLoad(u32 copy_u32DelayedClockCycle, u8 copy_u8Mode)
+{
+    if(copy_u32DelayedClockCycle <= 0x00FFFFFF)
+    {
+        if(copy_u8Mode == INT_MODE_RECURRENT)
+        {
+            copy_u32DelayedClockCycle--;
+        }
+        STK->LOAD = copy_u32DelayedClockCycle;
+        STK->VAL = 0;
+        STK->CTRL = 1 | (0 << 1) | (1 << 2); // wait till COUNTFLAG is set 1, indicating counter in LOAD register has decremented to 0
+        while ((STK->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0);
+    }
+    else
+    {
+        //error
+    }
+}
